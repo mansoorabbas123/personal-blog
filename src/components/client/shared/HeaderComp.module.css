@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5px;
+    border-bottom: 1px solid rgb(228, 228, 228);
+}
+
+.navLinks {
+    display: flex;
+    gap: 15px;
+    font-weight: 500;
+}
+
+.navLinksItem {
+    padding: 13px 18px;
+    color: rgb(34 34 34);
+}
+
+.navLinksItem:hover {
+    cursor: pointer;
+    background-color: rgb(43 162 131);
+    border-radius: 26px;
+    color: #fff;
+    transition: background-color 300ms, color 300ms;
+}
+
+
+.selectedRoute {
+    background-color: rgb(43 162 131);
+    border-radius: 26px;
+    color: #fff;
+}
+
+.dropDownMenu {
+    position: relative;
+}
+
+
+.dropDownOptions {
+   display: none;
+   background-color: #fff;
+   position: absolute;
+   top: 51px;
+   left: -.04px;
+   padding: 20px;
+   border: 0.5px solid rgb(240, 240, 240);
+   box-shadow: 0px 0px 10px -7px rgba(0,0,0,0.35);
+}
+
+.dropDownMenu:hover .dropDownOptions {
+    display: block;
+}
+
+
+.dropDownItem {
+    color: #000;
+    padding: 10px;
+    min-width: 180px;
+ }
+
+ .dropDownItem:hover {
+    color: rgb(43 162 131);
+    background-color: rgba(43, 162, 130, 0.082);
+    transition: color 100ms, background-color 100ms;
+ }
+
+.dropDownItemLink {
+    font-size: 14pt;
+}   
+
+.search {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(43 162 131);
+    border-radius: 50%;
+}
+
+.searchIcon {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+
