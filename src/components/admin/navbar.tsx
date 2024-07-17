@@ -1,6 +1,7 @@
 import { Home, Newspaper, Settings, Users } from "lucide-react";
 import { TypographyH3 } from "./shared/typography";
 import { Separator } from "./UI/separator";
+import Link from "next/link";
 
 export function Navbar() {
     return (
@@ -10,9 +11,9 @@ export function Navbar() {
         <div className="flex gap-2 items-center hover:cursor-pointer hover:bg-black hover:text-white p-3 rounded-md">
           <Home /> <span className="block">Home</span>
         </div>
-        <div className="flex gap-2 items-center hover:cursor-pointer hover:bg-black hover:text-white p-3 rounded-md">
+        <Link href='/admin/post' className="flex gap-2 items-center hover:cursor-pointer hover:bg-black hover:text-white p-3 rounded-md">
           <Newspaper /> <span className="block">Posts</span>
-        </div>
+        </Link>
         <div className="flex gap-2 items-center hover:cursor-pointer hover:bg-black hover:text-white p-3 rounded-md">
           <Users /> <span className="block">Users</span>
         </div>

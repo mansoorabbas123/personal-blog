@@ -20,7 +20,7 @@ export default function AdminLayout({
       enableSystem
       disableTransitionOnChange
     >
-      <div className="flex">
+      <div className="flex relative">
         <Navbar />
         <div className="w-full">
           <Header />

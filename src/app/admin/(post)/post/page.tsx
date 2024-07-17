@@ -1,0 +1,14 @@
+import { TypographyH1 } from "@/components/admin/shared/typography";
+import { CirclePlus } from "lucide-react";
+import Link from "next/link";
+
+export default function Post() {
+    return (
+        <div>
+            <p>Post page</p>
+            <Link href='/admin/create-post' className="absolute bottom-10 right-10">
+                <CirclePlus className="w-16 h-16 hover:w-20 hover:h-20 hover:cursor-pointer transition-all duration-75 text-primary"/>
+            </Link>
+        </div>
+    )
+}
