@@ -6,7 +6,6 @@ export default function CreatePostPage() {
             // Editor
             // upload modal
             // any other modals */}
-            
         </div>
     )
 }
