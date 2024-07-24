@@ -10,22 +10,22 @@ export type TypeNavLink = {
 export const navlinks: TypeNavLink[] = [
   {
     label: "Home",
-    href: "/",
+    href: "/admin/",
     Icon: <Home />,
   },
   {
     label: "Posts",
-    href: "/post",
+    href: "/admin/post",
     Icon: <Newspaper />,
   },
   {
     label: "Users",
-    href: "/",
+    href: "/admin/",
     Icon: <Users />,
   },
   {
     label: "Settings",
-    href: "/",
+    href: "/admin/",
     Icon: <Settings />,
   },
 ];

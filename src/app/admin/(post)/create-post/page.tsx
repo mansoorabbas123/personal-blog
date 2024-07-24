@@ -1,3 +1,4 @@
+import { Editor } from "@/components/admin/editor";
 
 export default function CreatePostPage() {
     return (
@@ -6,6 +7,7 @@ export default function CreatePostPage() {
             // Editor
             // upload modal
             // any other modals */}
+            <Editor />
         </div>
     )
 }
