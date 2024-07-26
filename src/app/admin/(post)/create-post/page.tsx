@@ -1,4 +1,4 @@
-import { Editor } from "@/components/admin/editor";
+import Editor from "@/components/admin/editor";
 
 export default function CreatePostPage() {
     return (
