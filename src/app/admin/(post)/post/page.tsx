@@ -1,4 +1,4 @@
-import { TypographyH1 } from "@/components/admin/shared/typography";
+'use client'
 import { CirclePlus } from "lucide-react";
 import Link from "next/link";
 

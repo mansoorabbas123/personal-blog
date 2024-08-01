@@ -1,3 +1,4 @@
+'use client'
 import Editor from "@/components/admin/editor";
 
 export default function CreatePostPage() {

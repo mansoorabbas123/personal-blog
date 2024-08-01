@@ -1,7 +1,7 @@
-import { Home, Newspaper, Settings, Users } from "lucide-react";
+'use client';
+
 import { TypographyH3 } from "./shared/typography";
 import { Separator } from "./UI/separator";
-import Link from "next/link";
 import { navlinks } from "@/navlinks";
 import { NavLink } from "./NavLink";
 

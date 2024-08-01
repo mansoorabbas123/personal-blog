@@ -1,5 +1,7 @@
-import { Home, Newspaper, Settings, Users } from "lucide-react";
+import { Contact, Home, Inbox, Mail, Newspaper, Settings, Users } from "lucide-react";
 import React from "react";
+import { GrDashboard } from "react-icons/gr";
+import { MdDashboard } from "react-icons/md";
 
 export type TypeNavLink = {
   label: string;
@@ -9,9 +11,9 @@ export type TypeNavLink = {
 
 export const navlinks: TypeNavLink[] = [
   {
-    label: "Home",
+    label: "Dashboard",
     href: "/admin/",
-    Icon: <Home />,
+    Icon: <GrDashboard  size={25}/>,
   },
   {
     label: "Posts",
@@ -22,6 +24,16 @@ export const navlinks: TypeNavLink[] = [
     label: "Users",
     href: "/admin/",
     Icon: <Users />,
+  },
+  {
+    label: "Comments",
+    href: "/admin/",
+    Icon: <Mail />,
+  },
+  {
+    label: "Contacts",
+    href: "/admin/",
+    Icon: <Contact />,
   },
   {
     label: "Settings",
