@@ -1,9 +1,4 @@
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "create post",
-  description: "",
-};
+'use client'
 
 export default function CreatePostLayout({
   children,

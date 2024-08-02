@@ -1,24 +1,32 @@
 "use client";
-import { useQuill } from "react-quilljs";
-import "quill/dist/quill.snow.css"; // Add css for snow theme
-import { EditorToolbar } from "./editor-toolbar";
 
-interface Props {}
+import { useEditor, EditorContent } from "@tiptap/react";
+import StarterKit from "@tiptap/starter-kit";
+import { Heading } from "./tiptap-custom-extensions/extend";
+import { useEffect, useState } from "react";
+import { Separator } from "../UI/separator";
+import EditorToolbar from "./editor-toolbar";
 
-export function Editor({}: Props) {
-  const { quill, quillRef } = useQuill({
-    modules: {
-      toolbar: [[{ header: [1, 2, 3, 4, 5, 6, false] }], ["clean"]],
+const Editor = () => {
+  const editor = useEditor({
+    extensions: [StarterKit, Heading],
+    editorProps: {
+      attributes: {
+        class:
+          "prose prose-lg focus:outline-none dark:prose-invert mx-auto h-full",
+      },
     },
-    formats: ["size", "bold", "header"], // Important
   });
-  //   console.log(quill); // undefined > Quill Object
-  //   console.log(quillRef); // { current: undefined } > { current: Quill Editor Reference }
-
+  useEffect(() => {
+    editor?.commands.setContent("<h2>Hello World!</h2>");
+  }, [editor]);
   return (
-    <div className="px-10 ">
-      <EditorToolbar />
-      <div ref={quillRef} className="w-full" />
+    <div className="lg:w-[60%] w-[80%] mx-auto ">
+      {editor && <EditorToolbar editor={editor} />}
+      <Separator className="my-4" />
+      {editor && <EditorContent editor={editor} className="" />}
     </div>
   );
-}
+};
+
+export default Editor;
