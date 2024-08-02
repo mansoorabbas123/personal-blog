@@ -3,6 +3,7 @@
 import { Editor } from "@tiptap/react";
 import DropdownOptions from "../../shared/dropdown-options";
 import { AiFillCaretDown } from "react-icons/ai";
+import { getFocusedEditor } from "../editor-utils";
 
 interface Props {
   editor: Editor;
@@ -33,10 +34,7 @@ export function TextSize({ editor }: Props) {
       onClick: () => getFocusedEditor(editor).toggleHeading({ level: 3 }).run(),
     },
   ];
-  const getFocusedEditor = (editor: Editor) => {
-    return editor.chain().focus();
-  };
-
+ 
   return (
     <DropdownOptions
       options={options}

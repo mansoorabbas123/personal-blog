@@ -13,17 +13,17 @@ const DropdownOptions: FC<Props> = ({ options, head }): JSX.Element => {
   const [showOptions, setOptions] = useState(false);
   return (
     <button
-      className="relative border"
+      className="relative"
       onBlur={() => setOptions(false)}
       onClick={() => setOptions(!showOptions)}
     >
       {head}
       {showOptions && (
-        <div className="absolute z-50 p-4 bg-white dark:bg-black ounded-md border bg-popover text-popover-foreground shadow-md">
+        <div className="absolute z-50 py-4 bg-white dark:bg-black ounded-md border bg-popover text-popover-foreground shadow-md">
           <ul className="flex flex-col gap-3 w-full cursor-default select-none items-center rounded-sm text-sm outline-none focus:bg-accent focus:text-accent-foreground">
             {options.map(({ label, onClick }, idx) => {
               return (
-                <li key={label + idx} onClick={onClick}>
+                <li key={label + idx} onClick={onClick} className="hover:bg-primary hover:text-primary-foreground p-1 px-4">
                   {label}
                 </li>
               );
