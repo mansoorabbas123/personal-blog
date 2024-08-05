@@ -3,13 +3,15 @@
 import { useEditor, EditorContent } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Heading } from "./tiptap-custom-extensions/extend";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Separator } from "../UI/separator";
 import EditorToolbar from "./editor-toolbar";
+import Underline from '@tiptap/extension-underline';
+import Blockquote from "@tiptap/extension-blockquote";
 
 const Editor = () => {
   const editor = useEditor({
-    extensions: [StarterKit, Heading],
+    extensions: [StarterKit, Heading, Underline, Blockquote],
     editorProps: {
       attributes: {
         class:
@@ -17,9 +19,11 @@ const Editor = () => {
       },
     },
   });
+  
   useEffect(() => {
-    editor?.commands.setContent("<h2>Hello World!</h2>");
+    editor?.commands.setContent("<blockquote>hello champ</blockquote>");
   }, [editor]);
+
   return (
     <div className="lg:w-[60%] w-[80%] mx-auto ">
       {editor && <EditorToolbar editor={editor} />}

@@ -1,6 +1,6 @@
 "use client";
 
-import { BsTypeBold } from "react-icons/bs";
+import { BsTypeUnderline } from "react-icons/bs";
 import { Button } from "../../UI/button";
 import { useState } from "react";
 import { Editor } from "@tiptap/react";
@@ -10,7 +10,7 @@ interface Props {
   editor: Editor;
 }
 
-export function Bold({ editor }: Props) {
+export function Underline({ editor }: Props) {
   const [hover, setHover] = useState({
     name: "",
     state: false,
@@ -18,15 +18,15 @@ export function Bold({ editor }: Props) {
   return (
     <Button
       className={`w-10 relative ${
-        editor.isActive("bold") && "bg-[#13493a] dark:bg-primary-hover"
+        editor.isActive("underline") && "bg-[#13493a] dark:bg-primary-hover"
       }`}
-      onClick={() => getFocusedEditor(editor).toggleBold().run()}
-      onMouseEnter={() => setHover({ name: "bold", state: true })}
+      onClick={() => getFocusedEditor(editor).toggleUnderline().run()}
+      onMouseEnter={() => setHover({ name: "underline", state: true })}
       onMouseLeave={() => setHover({ name: "", state: false })}
     >
-      <BsTypeBold
+      <BsTypeUnderline
         size={
-          (hover.name === "bold" && hover.state) || editor.isActive("bold")
+          (hover.name === "underline" && hover.state) || editor.isActive("underline")
             ? 25
             : 20
         }

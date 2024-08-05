@@ -1,6 +1,6 @@
 "use client";
 
-import { BsTypeBold } from "react-icons/bs";
+import { RiDoubleQuotesL } from "react-icons/ri";
 import { Button } from "../../UI/button";
 import { useState } from "react";
 import { Editor } from "@tiptap/react";
@@ -10,7 +10,7 @@ interface Props {
   editor: Editor;
 }
 
-export function Bold({ editor }: Props) {
+export function BlockQuote({ editor }: Props) {
   const [hover, setHover] = useState({
     name: "",
     state: false,
@@ -18,15 +18,15 @@ export function Bold({ editor }: Props) {
   return (
     <Button
       className={`w-10 relative ${
-        editor.isActive("bold") && "bg-[#13493a] dark:bg-primary-hover"
+        editor.isActive("blockquote") && "bg-[#13493a] dark:bg-primary-hover"
       }`}
-      onClick={() => getFocusedEditor(editor).toggleBold().run()}
-      onMouseEnter={() => setHover({ name: "bold", state: true })}
+      onClick={() => getFocusedEditor(editor).toggleBlockquote().run()}
+      onMouseEnter={() => setHover({ name: "blockquote", state: true })}
       onMouseLeave={() => setHover({ name: "", state: false })}
     >
-      <BsTypeBold
+      <RiDoubleQuotesL
         size={
-          (hover.name === "bold" && hover.state) || editor.isActive("bold")
+          (hover.name === "blockquote" && hover.state) || editor.isActive("blockquote")
             ? 25
             : 20
         }
