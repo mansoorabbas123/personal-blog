@@ -22,22 +22,22 @@ export const navlinks: TypeNavLink[] = [
   },
   {
     label: "Users",
-    href: "/admin/",
+    href: "/admin/erty",
     Icon: <Users />,
   },
   {
     label: "Comments",
-    href: "/admin/",
+    href: "/admin/abd",
     Icon: <Mail />,
   },
   {
     label: "Contacts",
-    href: "/admin/",
+    href: "/admin/gfhg",
     Icon: <Contact />,
   },
   {
     label: "Settings",
-    href: "/admin/",
+    href: "/admin/ghjh",
     Icon: <Settings />,
   },
 ];

@@ -1,33 +1,32 @@
 "use client";
 
-import { RiDoubleQuotesL } from "react-icons/ri";
 import { Button } from "../../UI/button";
 import { useState } from "react";
 import { Editor } from "@tiptap/react";
 import { getFocusedEditor } from "../editor-utils";
+import { IoIosCode } from "react-icons/io";
 
 interface Props {
   editor: Editor;
 }
 
-export function BlockQuote({ editor }: Props) {
+export function TextCode({ editor }: Props) {
   const [hover, setHover] = useState({
     name: "",
     state: false,
   });
-  
   return (
     <Button
       className={`w-10 relative ${
-        editor.isActive("blockquote") && "bg-[#13493a] dark:bg-primary-hover"
+        editor.isActive("code") && "bg-[#13493a] dark:bg-primary-hover"
       }`}
-      onClick={() => getFocusedEditor(editor).toggleBlockquote().run()}
-      onMouseEnter={() => setHover({ name: "blockquote", state: true })}
+      onClick={() => getFocusedEditor(editor).toggleCode().run()}
+      onMouseEnter={() => setHover({ name: "code", state: true })}
       onMouseLeave={() => setHover({ name: "", state: false })}
     >
-      <RiDoubleQuotesL
+      <IoIosCode
         size={
-          (hover.name === "blockquote" && hover.state) || editor.isActive("blockquote")
+          (hover.name === "code" && hover.state) || editor.isActive("code")
             ? 25
             : 20
         }

@@ -11,7 +11,7 @@ export function Navbar() {
       <TypographyH3 className="p-3 mb-2 sm:text-md text-sm">Logo</TypographyH3>
       <Separator className="mb-3" />
       {navlinks.map((link) => (
-        <NavLink key={link.href} NavLink={link} />
+        <NavLink key={link.label} NavLink={link} />
       ))}
     </div>
   );

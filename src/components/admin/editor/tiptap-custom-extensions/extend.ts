@@ -1,6 +1,7 @@
 "use client"
 
 import BaseHeading from '@tiptap/extension-heading'
+import BaseLink from '@tiptap/extension-link'
 import { mergeAttributes } from '@tiptap/core'
 
 type Levels = 1 | 2 | 3
@@ -25,3 +26,7 @@ export const Heading = BaseHeading.configure({ levels: [1, 2, 3] }).extend({
     ]
   },
 })
+
+export const Link = BaseLink.configure().extend({
+  inclusive: false,
+}) 

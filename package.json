@@ -9,13 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@radix-ui/react-dropdown-menu": "^2.1.1",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-popover": "^1.1.1",
     "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-separator": "^1.0.3",
     "@radix-ui/react-slot": "^1.1.0",
     "@reduxjs/toolkit": "^2.2.7",
     "@tiptap/extension-blockquote": "^2.5.8",
+    "@tiptap/extension-bubble-menu": "^2.6.5",
+    "@tiptap/extension-code-block": "^2.5.8",
     "@tiptap/extension-heading": "^2.5.8",
+    "@tiptap/extension-link": "^2.6.4",
+    "@tiptap/extension-placeholder": "^2.5.8",
     "@tiptap/extension-underline": "^2.5.8",
     "@tiptap/pm": "^2.5.7",
     "@tiptap/react": "^2.5.7",
@@ -28,12 +35,15 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.52.2",
     "react-icons": "^5.2.1",
     "react-redux": "^9.1.2",
     "tailwind-merge": "^2.3.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
