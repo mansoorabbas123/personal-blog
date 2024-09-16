@@ -1,16 +1,16 @@
 "use client";
 
-import { BsTypeBold } from "react-icons/bs";
 import { Button } from "../../UI/button";
 import { useState } from "react";
 import { Editor } from "@tiptap/react";
 import { getFocusedEditor } from "../editor-utils";
+import { TbCodeDots } from "react-icons/tb";
 
 interface Props {
   editor: Editor;
 }
 
-export function Bold({ editor }: Props) {
+export function CodeBlock({ editor }: Props) {
   const [hover, setHover] = useState({
     name: "",
     state: false,
@@ -18,15 +18,16 @@ export function Bold({ editor }: Props) {
   return (
     <Button
       className={`w-10 relative ${
-        editor.isActive("bold") && "bg-[#13493a] dark:bg-primary-hover"
+        editor.isActive("codeBlock") && "bg-[#13493a] dark:bg-primary-hover"
       }`}
-      onClick={() => getFocusedEditor(editor).toggleBold().run()}
-      onMouseEnter={() => setHover({ name: "bold", state: true })}
+      onClick={() => getFocusedEditor(editor).toggleCodeBlock().run()}
+      onMouseEnter={() => setHover({ name: "codeBlock", state: true })}
       onMouseLeave={() => setHover({ name: "", state: false })}
     >
-      <BsTypeBold
+      <TbCodeDots
         size={
-          (hover.name === "bold" && hover.state) || editor.isActive("bold")
+          (hover.name === "codeBlock" && hover.state) ||
+          editor.isActive("codeBlock")
             ? 25
             : 20
         }

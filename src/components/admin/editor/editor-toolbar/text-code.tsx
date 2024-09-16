@@ -1,16 +1,16 @@
 "use client";
 
-import { BsTypeBold } from "react-icons/bs";
 import { Button } from "../../UI/button";
 import { useState } from "react";
 import { Editor } from "@tiptap/react";
 import { getFocusedEditor } from "../editor-utils";
+import { IoIosCode } from "react-icons/io";
 
 interface Props {
   editor: Editor;
 }
 
-export function Bold({ editor }: Props) {
+export function TextCode({ editor }: Props) {
   const [hover, setHover] = useState({
     name: "",
     state: false,
@@ -18,15 +18,15 @@ export function Bold({ editor }: Props) {
   return (
     <Button
       className={`w-10 relative ${
-        editor.isActive("bold") && "bg-[#13493a] dark:bg-primary-hover"
+        editor.isActive("code") && "bg-[#13493a] dark:bg-primary-hover"
       }`}
-      onClick={() => getFocusedEditor(editor).toggleBold().run()}
-      onMouseEnter={() => setHover({ name: "bold", state: true })}
+      onClick={() => getFocusedEditor(editor).toggleCode().run()}
+      onMouseEnter={() => setHover({ name: "code", state: true })}
       onMouseLeave={() => setHover({ name: "", state: false })}
     >
-      <BsTypeBold
+      <IoIosCode
         size={
-          (hover.name === "bold" && hover.state) || editor.isActive("bold")
+          (hover.name === "code" && hover.state) || editor.isActive("code")
             ? 25
             : 20
         }

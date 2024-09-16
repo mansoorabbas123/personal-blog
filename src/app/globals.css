@@ -1,3 +1,11 @@
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: #adb5bd;
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
 @tailwind base;
   @tailwind components;
   @tailwind utilities;
@@ -15,7 +23,7 @@
 
       --primary: 164, 58%, 40%;
       --primary-foreground: 210 40% 98%;
-      --primary-hover:164, 58%, 50%;
+      --primary-hover: 164, 58%, 50%;
 
       --secondary: 210 40% 96.1%;
       --secondary-foreground: 222.2 47.4% 11.2%;
